@@ -37,18 +37,24 @@ $(document).ready(function(){
     function getStringNumber(i) {
       return i < 10 ? ('0' + i) : i;
     }
+
+    function createOptionTags(amount=100) {
+      var str='';
+      for(var i=0; i<amount; i++){
+        str+='<option value='+i+'>'+getStringNumber(i)+'</option>';
+      }
+      return str;
+    }
     
     function timerInitial(){
-      for(var i=0; i<100; i++){
-        $('#sel_Session_H').append('<option value='+i+'>'+getStringNumber(i)+'</option>');
-        $('#sel_Break_H').append('<option value='+i+'>'+getStringNumber(i)+'</option>');
-      }    
-      for(var i=0; i<60; i++){
-        $('#sel_Session_M').append('<option value='+i+'>'+getStringNumber(i)+'</option>');
-        $('#sel_Session_S').append('<option value='+i+'>'+getStringNumber(i)+'</option>');
-        $('#sel_Break_M').append('<option value='+i+'>'+getStringNumber(i)+'</option>');
-        $('#sel_Break_S').append('<option value='+i+'>'+getStringNumber(i)+'</option>');
-      }      
+      var options=createOptionTags();
+      $('#sel_Session_H').append(options);
+      $('#sel_Break_H').append(options);
+      options=createOptionTags(60);
+      $('#sel_Session_M').append(options);
+      $('#sel_Session_S').append(options);
+      $('#sel_Break_M').append(options);
+      $('#sel_Break_S').append(options);    
     }
     
     function countdownTimer(j){
