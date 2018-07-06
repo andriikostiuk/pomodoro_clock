@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  </head>  
+  <body>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">    
+    <div class='container'>
+      <svg id='backgroundTimer'>
+      <path id='timerSector'></path>
+    </svg>
+      <div id="sessionLength"><span id='session_Name'>Session length:</span>
+          <select id="sel_Session_H"></select><span class='select_Atributes'>h</span> 
+          <select id="sel_Session_M"></select><span class='select_Atributes'>m</span> 
+          <select id="sel_Session_S"></select><span class='select_Atributes'>s</span>
+      </div>
+      <div id="breakLength"><span id='break_Name'>Break length:</span> 
+          <select id="sel_Break_H"></select><span class='select_Atributes'>h</span> 
+          <select id="sel_Break_M"></select><span class='select_Atributes'>m</span> 
+          <select id="sel_Break_S"></select><span class='select_Atributes'>s</span>
+      </div>
+      <div id="timer"> 
+          <input id="timer_H" type="text" readonly> 
+          <input id="colon_1" type="text" readonly> 
+          <input id="timer_M" type="text" readonly> 
+          <input id="colon_2" type="text" readonly> 
+          <input id="timer_S" type="text" readonly> 
+      </div>
+      <div id='buttonStart'>
+        <button id='set_Pomodoro'>Start</button>
+      </div>
+      <div id='buttonClear'>
+        <button id='clear' disabled='true'>Clear</button>
+      </div>
+    </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src='main.js'></script>
+  </body>
+</html>
