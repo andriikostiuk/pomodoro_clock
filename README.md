@@ -1,3 +1,7 @@
 ## Pomodoro Clock
-This is classic Pomodoro Clock with my personal styles and animation effect.
+
+This is classic Pomodoro Clock with my personal styles and animation effects.
+
 Please visit site: https://andriikostiuk.github.io/pomodoro_clock/
+
+I used trigonometric functions and SVG elements to create dynamic animation for background:
